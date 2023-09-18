@@ -17,3 +17,11 @@
 
 ### 原理：
 脚本检测输入参数是否有 pull push clone，如果有，则进入for循环，并检测命令执行（比如 ```git push```）的结果，如果结果是执行失败，则继续重复执行，直到超过的循环阈值或者成功为止
+
+# persistent.sh
+原理与gitx.sh一致，只是persistent.sh不仅仅可以用于git，还可以执行任何其他命令。<br>
+使用方法:
+```
+  persistent.sh git push
+```
+
