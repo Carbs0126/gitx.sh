@@ -14,10 +14,10 @@ for ((i=0;i<$recycle_count;i++))
 do     
     git $@
     if [ $? -eq 0 ]; then
-        echo "\033[32m>>> git $@ 执行成功\033[0m"
+        echo -e "\033[32m>>> git $@ 执行成功\033[0m"
         break
     else
         failure_count=$((i + 1))
-        echo "\033[31m>>> git $@ 第${failure_count}次执行失败\033[0m"
+        echo -e "\033[31m>>> git $@ 第${failure_count}次执行失败\033[0m"
     fi
 done 
